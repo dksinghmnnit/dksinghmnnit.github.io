@@ -333,14 +333,6 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover {
   border-bottom: 2px solid #29B6F6;
 }
 
-/* Footer */
-body > footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 /* copyrights block */
 body > footer .copyrights {
   display: block;
