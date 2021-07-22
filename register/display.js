@@ -140,12 +140,12 @@ function projectHtmlFromPrjct(key, prjct){
 
 
 function onMtechAdd (snap) {
-  $('#mtech').append(projectHtmlFromMtech(snap.key, snap.val()));
+  $('#mtech').prepend(projectHtmlFromMtech(snap.key, snap.val()));
 }
 
 //prepare mtech object's HTML
 function projectHtmlFromMtech(key, mtech){
-  return '<div class="timeline-item col-sm-12 col-md-5 col-lg-5">'
+  return '<div class="timeline-item">'
 			+'<h4 class="item-title">'+mtech.title+'</h4>'
 			+'<span class="item-period">'+mtech.date+'</span>'
 			+'<span class="item-small">'+mtech.branch +'</span>'
@@ -155,12 +155,12 @@ function projectHtmlFromMtech(key, mtech){
 
 
 function onOutsideAdd (snap) {
-  $('#outside').append(projectHtmlFromOutside(snap.key, snap.val()));
+  $('#outside').prepend(projectHtmlFromOutside(snap.key, snap.val()));
 }
 
 //prepare outside intern object's HTML
 function projectHtmlFromOutside(key, outside){
-  return '<div class="timeline-item col-sm-12 col-md-5 col-lg-5">'
+  return '<div class="timeline-item">'
 			+'<h4 class="item-title">'+outside.title+'</h4>'
 			+'<span class="item-period">'+ outside.date+'</span>'
 			+'<span class="item-small">'+ outside.cllg +'</span>'
@@ -170,22 +170,16 @@ function projectHtmlFromOutside(key, outside){
 }
 
 function onUgAdd (snap) {
-  $('#ug').append(projectHtmlFromUg(snap.key, snap.val()));
+  $('#ug').prepend(projectHtmlFromUg(snap.key, snap.val()));
 }
 
 //prepare outside intern object's HTML
 function projectHtmlFromUg(key, ug){
-  return '<div class="lm-package-wrap col-md-4 default-col">'
-		+	 ' <div class="lm-package">  '                        
-		+		'<div class="lm-pricing-row">'
-		+		 ' <h3>'+ug.title+'</h3>'
-		+		  '<small>'+ug.date+'</small>'
-		+		'</div>'
-		+		'<div class="lm-default-row">'
-		+		  ug.author
-		+		'</div>'                  
-		+	  '</div>'					  
-		+	'</div>';
+  return '<div class="timeline-item">'
+			+'<h4 class="item-title">'+ug.title+'</h4>'
+			+'<span class="item-period">'+ ug.date+'</span>'
+			+'<p class="item-description">'+ ug.author +'</p>'
+		 +' </div>';
 }
 
 
@@ -215,14 +209,15 @@ function projectHtmlFromWorkshop(key, workshop){
 }
 
 function onReviewAdd (snap) {
-  $('#review').append(projectHtmlFromReview(snap.key, snap.val()));
+  $('#review').prepend(projectHtmlFromReview(snap.key, snap.val()));
 }
 
 //prepare conference object's HTML
 function projectHtmlFromReview(key, review){
-  return '<li>'
+  return'<div class="timeline-item">'
+    + '<p class="item-description">'
        +review.rvwentry
-  +'</li>';
+  +'</div>';
 }
 
 
@@ -232,9 +227,10 @@ function onConfAdd (snap) {
 
 //prepare conference object's HTML
 function projectHtmlFromConf(key, conf){
-   return'<li>'
-       +conf.cfentry
-  +'</li>';
+  return'<div class="timeline-item">'
+    + '<p class="item-description">'
+      +conf.cfentry
+  +'</div>';
 }
 function spanText(textStr, textClasses) {
   var classNames = textClasses.map(c => 'text-'+c).join(' ');
