@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on("load", function () {
   //initialize the firebase app
   var config = {
     apiKey: "AIzaSyCYCPnc6u4zVNq3zfV7_tQnFPpyqSID9i0",
@@ -24,7 +24,7 @@ $(document).ready(function () {
   var mtechRef = dbRef.ref("mtech");
   var outsideRef = dbRef.ref("outside");
   var ugRef = dbRef.ref("ug");
-  var storageRef = firebase.storage().ref();
+  // var storageRef = firebase.storage().ref();
   var auth = null;
 
   auth = "IFkp0bAQDncyI7sIiG4p94Fdb5L2";
@@ -39,9 +39,16 @@ $(document).ready(function () {
       temp = info.firstName + " " + info.lastName;
       //console.log(temp);
       if (info.photoUrl) {
-        //console.log("1a");
-        $(".user-info img").show();
-        $(".user-info img").attr("src", info.photoUrl);
+        var img = new Image();
+        $(img)
+          .on("load", function () {
+            $(".user-info").append($(this));
+            $(".user-info").closest(".photo").show();
+          })
+          .attr({
+            src: info.photoUrl,
+            alt: "Dushyant Profile Picture",
+          });
       }
       $("#fireres").append(
         '<a href="' +
