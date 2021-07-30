@@ -13,6 +13,40 @@ function journalHTML(journal) {
     "</div>"
   );
 }
+
+//PhD
+import phds from "../data/phds.js";
+phds.forEach((phd,key) => {
+  $("#phd").append(phdHTML(phd,key));
+});
+function phdHTML(phd,key) {
+  return (
+    '<div class="timeline-item" style=" display: flex; flex-direction: row; gap: 30px; align-items: center;">'+
+    '<div>'+
+    '<img class="img-thumbnail img-circle"'+
+          'src="images/phd/img_'+(key+1)+'.jpg"'+
+          'alt="'+phd.author+'"'+
+          'style="min-width: 5em; max-width: 8em"'+
+    '/>'+
+    '</div>'+
+    '<div>'+
+      '<h4 class="item-title">'+
+        phd.title+
+      '</h4>'+
+      '<span class="item-period">'+
+        phd.date+
+      '</span>'+
+      '<span class="item-small">'+
+        phd.subtitle+
+      '</span>'+
+      '<p class="item-description">'+
+        phd.author+
+      '</p>'+
+    '</div>'+
+  '</div>'
+  );
+}
+
 $(window).on("load", function () {
   //initialize the firebase app
   var config = {
