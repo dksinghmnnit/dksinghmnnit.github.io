@@ -37,7 +37,7 @@ function phdHTML(phd,key) {
         phd.date+
       '</span>'+
       '<span class="item-small">'+
-        phd.subtitle+
+        phd.status+
       '</span>'+
       '<p class="item-description">'+
         phd.author+
