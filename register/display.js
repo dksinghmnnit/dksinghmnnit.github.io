@@ -68,6 +68,12 @@ ugs.forEach((ug) => {
   $("#ugs").append(timelineItemExtendedHTML(ug.title,"",ug.date,ug.author));
 });
 
+//outside
+import outsides from "../data/outsides.js";
+outsides.forEach((outside) => {
+  $("#outsides").append(timelineItemExtendedHTML(outside.title,outside.college,outside.date,outside.author));
+});
+
 $(window).on("load", function () {
   //initialize the firebase app
   var config = {
@@ -89,7 +95,6 @@ $(window).on("load", function () {
   var workshopRef = dbRef.ref("workshop");
   var usersRef = dbRef.ref("users");
   var reviewRef = dbRef.ref("review");
-  var outsideRef = dbRef.ref("outside");
   // var storageRef = firebase.storage().ref();
   var auth = null;
 
@@ -161,7 +166,6 @@ $(window).on("load", function () {
       prjctRef.child(auth).on("child_added", onPrjctAdd);
       workshopRef.child(auth).on("child_added", onWorkshopAdd);
       reviewRef.child(auth).on("child_added", onReviewAdd);
-      outsideRef.child(auth).on("child_added", onOutsideAdd);
     });
 });
 
@@ -253,30 +257,6 @@ function projectHtmlFromPrjct(key, prjct) {
     "</div>" +
     "</div>" +
     "<br/><br/>"
-  );
-}
-
-function onOutsideAdd(snap) {
-  $("#outside").prepend(projectHtmlFromOutside(snap.key, snap.val()));
-}
-
-//prepare outside intern object's HTML
-function projectHtmlFromOutside(key, outside) {
-  return (
-    '<div class="timeline-item">' +
-    '<h4 class="item-title">' +
-    outside.title +
-    "</h4>" +
-    '<span class="item-period">' +
-    outside.date +
-    "</span>" +
-    '<span class="item-small">' +
-    outside.cllg +
-    "</span>" +
-    '<p class="item-description">' +
-    outside.author +
-    "</p>" +
-    " </div>"
   );
 }
 
