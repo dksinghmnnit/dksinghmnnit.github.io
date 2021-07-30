@@ -1,3 +1,18 @@
+//Journals
+import journals from "../data/journals.js";
+journals.forEach((journal) => {
+  $("#journal").append(journalHTML(journal));
+});
+//prepare journal object's HTML
+function journalHTML(journal) {
+  return (
+    '<div class="timeline-item">' +
+    '<p class="item-description">' +
+    journal +
+    "</p>" +
+    "</div>"
+  );
+}
 $(window).on("load", function () {
   //initialize the firebase app
   var config = {
@@ -16,7 +31,6 @@ $(window).on("load", function () {
   var dbRef = firebase.database();
   var projectsRef = dbRef.ref("projects");
   var prjctRef = dbRef.ref("prjct");
-  var journalsRef = dbRef.ref("journals");
   var workshopRef = dbRef.ref("workshop");
   var usersRef = dbRef.ref("users");
   var confRef = dbRef.ref("conferences");
@@ -93,7 +107,6 @@ $(window).on("load", function () {
       }
       projectsRef.child(auth).on("child_added", onChildAdd);
       prjctRef.child(auth).on("child_added", onPrjctAdd);
-      journalsRef.child(auth).on("child_added", onJournalAdd);
       confRef.child(auth).on("child_added", onConfAdd);
       workshopRef.child(auth).on("child_added", onWorkshopAdd);
       reviewRef.child(auth).on("child_added", onReviewAdd);
@@ -260,20 +273,6 @@ function projectHtmlFromUg(key, ug) {
     ug.author +
     "</p>" +
     " </div>"
-  );
-}
-
-function onJournalAdd(snap) {
-  $("#journal").append(projectHtmlFromJournal(snap.key, snap.val()));
-}
-
-//prepare journal object's HTML
-function projectHtmlFromJournal(key, journal) {
-  return (
-    '<div class="timeline-item">' +
-    '<p class="item-description">' +
-    journal.jentry +
-    "</div>"
   );
 }
 
