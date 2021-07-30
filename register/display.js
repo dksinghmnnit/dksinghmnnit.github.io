@@ -14,6 +14,24 @@ function journalHTML(journal) {
   );
 }
 
+// console.log(journals.reverse());
+
+//conferences
+import conferences from "../data/conferences.js";
+conferences.forEach((conference) => {
+  $("#conference").append(conferenceHTML(conference));
+});
+//prepare conference object's HTML
+function conferenceHTML(conference) {
+  return (
+    '<div class="timeline-item">' +
+    '<p class="item-description">' +
+    conference +
+    "</p>" +
+    "</div>"
+  );
+}
+
 //PhD
 import phds from "../data/phds.js";
 phds.forEach((phd,key) => {
@@ -67,7 +85,6 @@ $(window).on("load", function () {
   var prjctRef = dbRef.ref("prjct");
   var workshopRef = dbRef.ref("workshop");
   var usersRef = dbRef.ref("users");
-  var confRef = dbRef.ref("conferences");
   var reviewRef = dbRef.ref("review");
   var mtechRef = dbRef.ref("mtech");
   var outsideRef = dbRef.ref("outside");
@@ -141,7 +158,6 @@ $(window).on("load", function () {
       }
       projectsRef.child(auth).on("child_added", onChildAdd);
       prjctRef.child(auth).on("child_added", onPrjctAdd);
-      confRef.child(auth).on("child_added", onConfAdd);
       workshopRef.child(auth).on("child_added", onWorkshopAdd);
       reviewRef.child(auth).on("child_added", onReviewAdd);
       mtechRef.child(auth).on("child_added", onMtechAdd);
@@ -339,19 +355,6 @@ function projectHtmlFromReview(key, review) {
   );
 }
 
-function onConfAdd(snap) {
-  $("#conference").append(projectHtmlFromConf(snap.key, snap.val()));
-}
-
-//prepare conference object's HTML
-function projectHtmlFromConf(key, conf) {
-  return (
-    '<div class="timeline-item">' +
-    '<p class="item-description">' +
-    conf.cfentry +
-    "</div>"
-  );
-}
 function spanText(textStr, textClasses) {
   var classNames = textClasses.map((c) => "text-" + c).join(" ");
   return '<span class="' + classNames + '">' + textStr + "</span>";
