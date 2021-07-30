@@ -19,7 +19,7 @@ function journalHTML(journal) {
 //conferences
 import conferences from "../data/conferences.js";
 conferences.forEach((conference) => {
-  $("#conference").append(conferenceHTML(conference));
+  $("#conferences").append(conferenceHTML(conference));
 });
 //prepare conference object's HTML
 function conferenceHTML(conference) {
@@ -31,6 +31,24 @@ function conferenceHTML(conference) {
     "</div>"
   );
 }
+
+//bookchapters
+import bookchapters from "../data/bookchapters.js";
+bookchapters.forEach((bookchapter) => {
+  $("#bookchapters").append(bookchapterHTML(bookchapter));
+});
+//prepare bookchapter object's HTML
+function bookchapterHTML(bookchapter) {
+  return (
+    '<div class="timeline-item">' +
+    '<p class="item-description">' +
+    bookchapter +
+    "</p>" +
+    "</div>"
+  );
+}
+
+console.log(bookchapters.reverse());
 
 //PhD
 import phds from "../data/phds.js";
