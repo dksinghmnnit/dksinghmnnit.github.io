@@ -1,87 +1,72 @@
 //Journals
 import journals from "../data/journals.js";
 journals.forEach((journal) => {
-  $("#journal").append(journalHTML(journal));
+  $("#journals").append(timelineItemHTML(journal));
 });
-//prepare journal object's HTML
-function journalHTML(journal) {
-  return (
-    '<div class="timeline-item">' +
-    '<p class="item-description">' +
-    journal +
-    "</p>" +
-    "</div>"
-  );
-}
-
 // console.log(journals.reverse());
 
 //conferences
 import conferences from "../data/conferences.js";
 conferences.forEach((conference) => {
-  $("#conferences").append(conferenceHTML(conference));
+  $("#conferences").append(timelineItemHTML(conference));
 });
-//prepare conference object's HTML
-function conferenceHTML(conference) {
-  return (
-    '<div class="timeline-item">' +
-    '<p class="item-description">' +
-    conference +
-    "</p>" +
-    "</div>"
-  );
-}
+// console.log(conferences.reverse());
 
 //bookchapters
 import bookchapters from "../data/bookchapters.js";
 bookchapters.forEach((bookchapter) => {
-  $("#bookchapters").append(bookchapterHTML(bookchapter));
+  $("#bookchapters").append(timelineItemHTML(bookchapter));
 });
-//prepare bookchapter object's HTML
-function bookchapterHTML(bookchapter) {
+// console.log(bookchapters.reverse());
+
+//PhD
+import phds from "../data/phds.js";
+phds.forEach((phd, key) => {
+  $("#phds").append(phdHTML(phd, key));
+});
+function phdHTML(phd, key) {
   return (
-    '<div class="timeline-item">' +
+    '<div class="timeline-item" style=" display: flex; flex-direction: row; gap: 30px; align-items: center;">' +
+    "<div>" +
+    '<img class="img-thumbnail img-circle"' +
+    'src="images/phd/img_' +
+    (key + 1) +
+    '.jpg"' +
+    'alt="' +
+    phd.author +
+    '"' +
+    'style="min-width: 5em; max-width: 8em"' +
+    "/>" +
+    "</div>" +
+    "<div>" +
+    '<h4 class="item-title">' +
+    phd.title +
+    "</h4>" +
+    '<span class="item-period">' +
+    phd.date +
+    "</span>" +
+    '<span class="item-small">' +
+    phd.status +
+    "</span>" +
     '<p class="item-description">' +
-    bookchapter +
+    phd.author +
     "</p>" +
+    "</div>" +
     "</div>"
   );
 }
 
-console.log(bookchapters.reverse());
-
-//PhD
-import phds from "../data/phds.js";
-phds.forEach((phd,key) => {
-  $("#phd").append(phdHTML(phd,key));
+//mtech
+import mtechs from "../data/mtechs.js";
+mtechs.forEach((mtech) => {
+  $("#mtechs").append(timelineItemExtendedHTML(mtech.title,mtech.branch,mtech.date,mtech.author));
 });
-function phdHTML(phd,key) {
-  return (
-    '<div class="timeline-item" style=" display: flex; flex-direction: row; gap: 30px; align-items: center;">'+
-    '<div>'+
-    '<img class="img-thumbnail img-circle"'+
-          'src="images/phd/img_'+(key+1)+'.jpg"'+
-          'alt="'+phd.author+'"'+
-          'style="min-width: 5em; max-width: 8em"'+
-    '/>'+
-    '</div>'+
-    '<div>'+
-      '<h4 class="item-title">'+
-        phd.title+
-      '</h4>'+
-      '<span class="item-period">'+
-        phd.date+
-      '</span>'+
-      '<span class="item-small">'+
-        phd.status+
-      '</span>'+
-      '<p class="item-description">'+
-        phd.author+
-      '</p>'+
-    '</div>'+
-  '</div>'
-  );
-}
+
+//ug
+import ugs from "../data/ugs.js";
+ugs.forEach((ug) => {
+  $("#ugs").append(timelineItemExtendedHTML(ug.title,"",ug.date,ug.author));
+});
 
 $(window).on("load", function () {
   //initialize the firebase app
@@ -104,9 +89,7 @@ $(window).on("load", function () {
   var workshopRef = dbRef.ref("workshop");
   var usersRef = dbRef.ref("users");
   var reviewRef = dbRef.ref("review");
-  var mtechRef = dbRef.ref("mtech");
   var outsideRef = dbRef.ref("outside");
-  var ugRef = dbRef.ref("ug");
   // var storageRef = firebase.storage().ref();
   var auth = null;
 
@@ -178,9 +161,7 @@ $(window).on("load", function () {
       prjctRef.child(auth).on("child_added", onPrjctAdd);
       workshopRef.child(auth).on("child_added", onWorkshopAdd);
       reviewRef.child(auth).on("child_added", onReviewAdd);
-      mtechRef.child(auth).on("child_added", onMtechAdd);
       outsideRef.child(auth).on("child_added", onOutsideAdd);
-      ugRef.child(auth).on("child_added", onUgAdd);
     });
 });
 
@@ -275,30 +256,6 @@ function projectHtmlFromPrjct(key, prjct) {
   );
 }
 
-function onMtechAdd(snap) {
-  $("#mtech").prepend(projectHtmlFromMtech(snap.key, snap.val()));
-}
-
-//prepare mtech object's HTML
-function projectHtmlFromMtech(key, mtech) {
-  return (
-    '<div class="timeline-item">' +
-    '<h4 class="item-title">' +
-    mtech.title +
-    "</h4>" +
-    '<span class="item-period">' +
-    mtech.date +
-    "</span>" +
-    '<span class="item-small">' +
-    mtech.branch +
-    "</span>" +
-    '<p class="item-description">' +
-    mtech.author +
-    "</p>" +
-    " </div>"
-  );
-}
-
 function onOutsideAdd(snap) {
   $("#outside").prepend(projectHtmlFromOutside(snap.key, snap.val()));
 }
@@ -318,27 +275,6 @@ function projectHtmlFromOutside(key, outside) {
     "</span>" +
     '<p class="item-description">' +
     outside.author +
-    "</p>" +
-    " </div>"
-  );
-}
-
-function onUgAdd(snap) {
-  $("#ug").prepend(projectHtmlFromUg(snap.key, snap.val()));
-}
-
-//prepare outside intern object's HTML
-function projectHtmlFromUg(key, ug) {
-  return (
-    '<div class="timeline-item">' +
-    '<h4 class="item-title">' +
-    ug.title +
-    "</h4>" +
-    '<span class="item-period">' +
-    ug.date +
-    "</span>" +
-    '<p class="item-description">' +
-    ug.author +
     "</p>" +
     " </div>"
   );
@@ -373,7 +309,35 @@ function projectHtmlFromReview(key, review) {
   );
 }
 
-function spanText(textStr, textClasses) {
-  var classNames = textClasses.map((c) => "text-" + c).join(" ");
-  return '<span class="' + classNames + '">' + textStr + "</span>";
+//prepare timelineitem object's HTML
+function timelineItemHTML(itemdata) {
+  return (
+    '<div class="timeline-item">' +
+    '<p class="item-description">' +
+    itemdata +
+    "</p>" +
+    "</div>"
+  );
+}
+
+//prepare timelineitemextended object's HTML
+function timelineItemExtendedHTML(title,subtitle,period,description) {
+  return (
+    '<div class="timeline-item">' +
+    "<div>" +
+    '<h4 class="item-title">' +
+    title +
+    "</h4>" +
+    '<span class="item-period">' +
+    period +
+    "</span>" +
+    '<span class="item-small">' +
+    subtitle +
+    "</span>" +
+    '<p class="item-description">' +
+    description +
+    "</p>" +
+    "</div>" +
+    "</div>"
+  );
 }
