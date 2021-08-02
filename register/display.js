@@ -80,10 +80,10 @@ sessions.forEach((session) => {
   $("#sessions").append(timelineItemHTML(session));
 });
 
-//roles and responsibilities
-import responsibilities from "../data/responsibilities.js";
-responsibilities.forEach((responsibility) => {
-  $("#responsibilities").append(timelineItemHTML(responsibility));
+//Administrative Duties
+import duties from "../data/duties.js";
+duties.forEach((duty) => {
+  $("#duties").append(timelineItemHTML(duty));
 });
 
 //workshops
