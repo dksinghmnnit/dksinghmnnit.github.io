@@ -3,89 +3,89 @@ const ugs = [
     title: "Smart Emeotion Detector and Typing Assistant",
     date: "2020",
     author:
-      "Shruti Jagwani," +
-      "<br/>Khyati Garg," +
-      "<br/>Rajat Kumar Gupta," +
-      "<br/>Nitesh Kumar",
+      "Shruti Jagwani (20168019)"+
+      "<br />Khyati Garg (20168052)"+
+      "<br />Rajat Kumar Gupta (20168079)"+
+      "<br />Nitesh Kumar (20168051)",
   },
   {
     title: "Human Activity Recognition by Body Points Sequencing",
     date: "2020",
     author:
-      "Mayank Rana," +
-      "<br/>Komal Khandelwal," +
-      "<br/>Manvi Kishore," +
-      "<br/>Juhi Verma",
+      "Mayank Rana (20164041)"+
+      "<br />Komal Khandelwal (20164100)"+
+      "<br />Manvi Kishore (20164077)"+
+      "<br />Juhi Verma (20164061)",
   },
   {
     title: "Modelling Hand Gestures for Sign Language Translation",
     date: "2020",
     author:
-      "Ishank Tyagi," +
-      "<br/>Divyansh Soni," +
-      "<br/>Kailash Chand Saini," +
-      "<br/>Chandan Jyoti Morang",
+      "Ishank Tyagi (20164153)"+
+      "<br />Divyansh Soni (20164137)"+
+      "<br />Kailash Chand Saini (20164125)"+
+      "<br />Chandan Jyoti Morang (20164153)",
   },
   {
     title: "Assistive Agent using TFlite by CNN Quantization",
     date: "2019",
     author:
-      "Ankur Mishra," +
-      "<br/>Akshit Sharma," +
-      "<br/>Abhishek Kumar," +
-      "<br/>Sourav Kumar," +
-      "<br/>Suraj Shah",
+      "Ankur Mishra (20153062)"+
+      "<br />Akshit Sharma (20158010)"+
+      "<br />Abhishek Kumar (20158060)"+
+      "<br />Sourav Kumar (20158062)"+
+      "<br />Suraj Shah (20148005)",
   },
   {
     title: "Robust Detection of Duplicated Image Regions",
     date: "2019",
     author:
-      "Jatin Tayal," +
-      "<br/>Lavkush Chauhan," +
-      "<br/>Hemant Kushwah," +
-      "<br/>Brajesh Singh," +
-      "<br/>Lokajit Subbaraja",
+      "Jatin Tayal (20154140)"+
+      "<br />Lavkush Chauhan (20154059)"+
+      "<br />Hemant Kushwah (20154119)"+
+      "<br />Brajesh Singh (20154142)"+
+      "<br />Lokajit Subbaraja (20154003)",
   },
   {
     title: "Smart Agriculture Assistant",
     date: "2019",
     author:
-      "Sidhant Kohli," +
-      "<br/>Shivam Kumar," +
-      "<br/>Yugendra Kumar Sharma," +
-      "<br/>SUraj Kumar Mall," +
-      "<br/>Ved Prakash",
+      "Sidhant Kohli (20154143)"+
+      "<br />Shivam Kumar (20154063)"+
+      "<br />Yugendra Kumar Sharma (20154067)"+
+      "<br />Suraj Kumar Mall (20154094)"+
+      "<br />Ved Prakash (20154124)",
   },
   {
     title: "Activity Recognition in Live Video",
     date: "2018",
     author:
-      "Himanshu Patel," +
-      "<br/>Arjav Jain," +
-      "<br/>Kaushlam," +
-      "<br/>Ajay Kumar Gond," +
-      "<br/>Kante Suprabhat",
+      "Himanshu Patel (20145081)"+
+      "<br />Arjav Jain (20148066)"+
+      "<br />Kaushlam (20144120)"+
+      "<br />Ajay Kumar Gond (20144137)"+
+      "<br />Kante Suprabhat (20144152)",
   },
   {
     title:
       "Scene Understanding via Real Time Object Detection and Visual Question Answering",
     date: "2018",
     author:
-      "Utkarsh Ojha," +
-      "<br/>Utsav Adhikari," +
-      "<br/>Varun yadav," +
-      "<br/>Vijay Prakash Dwivedi," +
-      "<br/>Raj Kumar",
+      "Utkarsh Ojha (20145095)"+
+      "<br />Utsav Adhikari (20144022)"+
+      "<br />Varun Yadav (20144035)"+
+      "<br />Vijay Prakash Dwivedi (20144013)"+
+      "<br />Raj Kumar (20144084)",
   },
   {
     title: "Smart Policing System",
     date: "2018",
     author:
-      "Sumit Paroothi," +
-      "<br/>Shristi Jaiswal," +
-      "<br/>Srikanth Karlapati," +
-      "<br/>Uttej Cheedalla," +
-      "<br/>Banoth Akhil Naik",
+      "Sumit Paroothi (20148045)"+
+      "<br />Shristi Jaiswal (20146021)"+
+      "<br />Srikanth Karlapati (20148101)"+
+      "<br />Uttej Cheedalla (20148103)"+
+      "<br />Banoth Akhil Naik (20148105)",
   },
   {
     title: "Alert system for theft control through real time surveillance",
@@ -171,7 +171,8 @@ const ugs = [
       "Shashank Jain(20108022)," +
       "<br/>Sherry(20108096)," +
       "<br/>Abhinav Palash(20106022)," +
-      "<br/>Alok Kumar Yadav(20108105),Tushar Gangwar(20109020)",
+      "<br/>Alok Kumar Yadav(20108105)," +
+      "<br/>Tushar Gangwar(20109020)",
   },
   {
     title: "Dynamic environment exploration tool",
