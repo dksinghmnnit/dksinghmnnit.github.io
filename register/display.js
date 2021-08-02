@@ -74,10 +74,16 @@ outsides.forEach((outside) => {
   $("#outsides").append(timelineItemExtendedHTML(outside.title,outside.college,outside.date,outside.author));
 });
 
-//sessions
+//technical sessions
 import sessions from "../data/sessions.js";
 sessions.forEach((session) => {
   $("#sessions").append(timelineItemHTML(session));
+});
+
+//roles and responsibilities
+import responsibilities from "../data/responsibilities.js";
+responsibilities.forEach((responsibility) => {
+  $("#responsibilities").append(timelineItemHTML(responsibility));
 });
 
 $(window).on("load", function () {
