@@ -119,8 +119,6 @@ $(window).on("load", function () {
   var projectsRef = dbRef.ref("projects");
   var prjctRef = dbRef.ref("prjct");
   var usersRef = dbRef.ref("users");
-  var reviewRef = dbRef.ref("review");
-  // var storageRef = firebase.storage().ref();
   var auth = null;
 
   auth = "IFkp0bAQDncyI7sIiG4p94Fdb5L2";
@@ -189,7 +187,6 @@ $(window).on("load", function () {
       }
       projectsRef.child(auth).on("child_added", onChildAdd);
       prjctRef.child(auth).on("child_added", onPrjctAdd);
-      reviewRef.child(auth).on("child_added", onReviewAdd);
     });
 });
 
@@ -281,20 +278,6 @@ function projectHtmlFromPrjct(key, prjct) {
     "</div>" +
     "</div>" +
     "<br/><br/>"
-  );
-}
-
-function onReviewAdd(snap) {
-  $("#review").prepend(projectHtmlFromReview(snap.key, snap.val()));
-}
-
-//prepare conference object's HTML
-function projectHtmlFromReview(key, review) {
-  return (
-    '<div class="timeline-item">' +
-    '<p class="item-description">' +
-    review.rvwentry +
-    "</div>"
   );
 }
 
