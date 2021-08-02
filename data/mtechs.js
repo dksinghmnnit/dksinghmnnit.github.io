@@ -1,27 +1,39 @@
 const mtechs =[
     {
+        title:"Vision in Dark: Viewing the objects in dark images",
+        date:"June 2021",
+        branch:"Information Security",
+        author:"Harshvardhan Patidar [2019IS17]",
+    },
+    {
+        title:"An approach of de-raining noisy images for the image quality enhancement",
+        date:"June 2021",
+        branch:"Information Security",
+        author:"Saurav Maurya [2019IS07]",
+    },
+    {
         title:"Modelling Hand Gestures for Sign Language Translation",
         date:"June 2020",
         branch:"Software Engineering",
-        author:"Anshu Kumar",
+        author:"Anshu Kumar [2016SW04]",
     },
     {
         title:"Recognizing Elderly Peoples in Surveillance Video using Body Posture Skeleton for Their Assistance",
         date:"July 2020",
         branch:"Information Security",
-        author:"Vishnu Pratap Singh",
+        author:"Vishnu Pratap Singh [2018IS08]",
     },
     {
         title:"A Deep Learning Approach for Image Denoising",
         date:"June 2019",
         branch:"Computer Science",
-        author:"Komal Bajaj",
+        author:"Komal Bajaj [2017CS14]",
     },
     {
         title:"Malware Detection using Machine Learning Approaches",
         date:"June 2019",
         branch:"Information Security",
-        author:"Saima Naz",
+        author:"Saima Naz [2017IS16]",
     },
     {
         title:"An Efficient Approach for Handwritten Devanagiri Character Recognition based on Artificial Neural Network",
@@ -33,7 +45,7 @@ const mtechs =[
         title:"Image Captioning to Understand Surroundings through Transfer Learning",
         date:"May 2018",
         branch:"Branch: - CS",
-        author:"Mohd Ali",
+        author:"Mohd Ali [2016CS18]",
     },
     {
         title:"Visibility Improvement and Object Detection in Foggy Images",
@@ -81,7 +93,7 @@ const mtechs =[
         title:"A novel approach for High Speed 2D to 3D Conversion",
         date:"June 2014",
         branch:"Branch: - CS",
-        author:"Sanjay Yadav[2012CS30]",
+        author:"Sanjay Yadav [2012CS30]",
     }
 ];
 
