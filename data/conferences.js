@@ -1,4 +1,4 @@
-const journals =
+const conferences =
 [
     "Lalit Kumar, <strong>D. K. Singh</strong>, &ldquo;Analyzing Computational Response and Performance of Deep Convolution Neural Network for Plant Disease Classification using Plant Leave Dataset&rdquo;, 10<sup>th</sup> IEEE CSNT-2021, OIST Bhopal (India), 18-19 June 2021. [IEEE,<strong> Scopus</strong>]",
     "<strong>D. K. Singh</strong>, &ldquo;3D-CNN based Dynamic Gesture Recognition for Indian Sign Language Modeling&rdquo;, ACLing-2021, The British University in Dubai, Dubai (UAE), 04-05 June 2021. [Elsevier,<strong> Scopus</strong>]",
@@ -36,4 +36,4 @@ const journals =
     "<strong>D. K. Singh</strong>, &ldquo;Component-Based Size Measurement Method&rdquo;, 5<sup>th</sup> International IT Conference, PCTE, Ludhiana (India), May 2009."
 ]
 
-export default journals;
+export default conferences;

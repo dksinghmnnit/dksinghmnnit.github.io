@@ -74,6 +74,12 @@ outsides.forEach((outside) => {
   $("#outsides").append(timelineItemExtendedHTML(outside.title,outside.college,outside.date,outside.author));
 });
 
+//sessions
+import sessions from "../data/sessions.js";
+sessions.forEach((session) => {
+  $("#sessions").append(timelineItemHTML(session));
+});
+
 $(window).on("load", function () {
   //initialize the firebase app
   var config = {
