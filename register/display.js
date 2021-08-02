@@ -93,6 +93,13 @@ workshops.forEach((workshop) => {
 });
 // console.log(workshops.reverse());
 
+//reviews
+import reviews from "../data/reviews.js";
+reviews.forEach((review) => {
+  $("#reviews").append(timelineItemHTML(review));
+});
+console.log(reviews.reverse());
+
 $(window).on("load", function () {
   //initialize the firebase app
   var config = {
