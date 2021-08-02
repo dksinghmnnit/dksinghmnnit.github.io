@@ -86,6 +86,13 @@ responsibilities.forEach((responsibility) => {
   $("#responsibilities").append(timelineItemHTML(responsibility));
 });
 
+//workshops
+import workshops from "../data/workshops.js";
+workshops.forEach((workshop) => {
+  $("#workshops").append(timelineItemHTML(workshop));
+});
+// console.log(workshops.reverse());
+
 $(window).on("load", function () {
   //initialize the firebase app
   var config = {
@@ -104,7 +111,6 @@ $(window).on("load", function () {
   var dbRef = firebase.database();
   var projectsRef = dbRef.ref("projects");
   var prjctRef = dbRef.ref("prjct");
-  var workshopRef = dbRef.ref("workshop");
   var usersRef = dbRef.ref("users");
   var reviewRef = dbRef.ref("review");
   // var storageRef = firebase.storage().ref();
@@ -176,7 +182,6 @@ $(window).on("load", function () {
       }
       projectsRef.child(auth).on("child_added", onChildAdd);
       prjctRef.child(auth).on("child_added", onPrjctAdd);
-      workshopRef.child(auth).on("child_added", onWorkshopAdd);
       reviewRef.child(auth).on("child_added", onReviewAdd);
     });
 });
@@ -269,21 +274,6 @@ function projectHtmlFromPrjct(key, prjct) {
     "</div>" +
     "</div>" +
     "<br/><br/>"
-  );
-}
-
-function onWorkshopAdd(snap) {
-  $("#workshop").append(projectHtmlFromWorkshop(snap.key, snap.val()));
-}
-
-//prepare workshop object's HTML
-function projectHtmlFromWorkshop(key, workshop) {
-  return (
-    '<div class="timeline-item">' +
-    '<p class="item-description">' +
-    workshop.wentry +
-    "</p>" +
-    "</div>"
   );
 }
 
