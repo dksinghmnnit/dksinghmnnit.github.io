@@ -1,15 +1,5 @@
 const outsides = [
   {
-    title: "Smart Emeotion Detector and Typing Assistant",
-    date: "2020",
-    author:
-      "Shruti Jagwani," +
-      "<br/>Khyati Garg," +
-      "<br/>Rajat Kumar Gupta," +
-      "<br/>Nitesh Kumar",
-  },
-
-  {
     title: "To be decided",
     date: "Summer",
     college: "NIT Patna",
