@@ -59,20 +59,49 @@ function phdHTML(phd, key) {
 //mtech
 import mtechs from "../data/mtechs.js";
 mtechs.forEach((mtech) => {
-  $("#mtechs").append(timelineItemExtendedHTML(mtech.title,mtech.branch,mtech.date,mtech.author));
+  $("#mtechs").append(
+    timelineItemExtendedHTML(
+      mtech.title,
+      mtech.branch,
+      mtech.date,
+      mtech.author
+    )
+  );
 });
 
 //ug
 import ugs from "../data/ugs.js";
 ugs.forEach((ug) => {
-  $("#ugs").append(timelineItemExtendedHTML(ug.title,"",ug.date,ug.author));
+  $("#ugs").append(timelineItemExtendedHTML(ug.title, "", ug.date, ug.author));
 });
 
 //outside
 import outsides from "../data/outsides.js";
 outsides.forEach((outside) => {
-  $("#outsides").append(timelineItemExtendedHTML(outside.title,outside.college,outside.date,outside.author));
+  $("#outsides").append(
+    timelineItemExtendedHTML(
+      outside.title,
+      outside.college,
+      outside.date,
+      outside.author
+    )
+  );
 });
+
+//Expert Talks
+import talks from "../data/talks.js";
+talks.forEach((talk) => {
+  $("#talks").append(
+    cardItemExtendedHTML(
+      talk.title,
+      talk.type,
+      talk.date,
+      talk.description,
+      talk.place
+    )
+  );
+});
+// console.log(talks);
 
 //technical sessions
 import sessions from "../data/sessions.js";
@@ -98,7 +127,8 @@ import reviews from "../data/reviews.js";
 reviews.forEach((review) => {
   $("#reviews").append(timelineItemHTML(review));
 });
-console.log(reviews.reverse());
+// console.log(reviews.reverse());
+
 
 $(window).on("load", function () {
   //initialize the firebase app
@@ -293,7 +323,7 @@ function timelineItemHTML(itemdata) {
 }
 
 //prepare timelineitemextended object's HTML
-function timelineItemExtendedHTML(title,subtitle,period,description) {
+function timelineItemExtendedHTML(title, subtitle, period, description) {
   return (
     '<div class="timeline-item">' +
     "<div>" +
@@ -310,6 +340,27 @@ function timelineItemExtendedHTML(title,subtitle,period,description) {
     description +
     "</p>" +
     "</div>" +
+    "</div>"
+  );
+}
+
+//prepare timelineitemextended object's HTML
+function cardItemExtendedHTML(title, subtitle, period, description, place) {
+  return (
+    '<div class="card-item">' +
+    "<h3>" +
+    title +
+    "</h3>" +
+    "<small>" +
+    subtitle +
+    "</small>" +
+    '<div class="label label-primary">' +
+    period +
+    "</div>" +
+    (description
+      ? '<div class="lm-default-row">' + description + "</div>"
+      : "") +
+    (place ? '<div class="lm-default-row">' + place + "</div>" : "") +
     "</div>"
   );
 }
