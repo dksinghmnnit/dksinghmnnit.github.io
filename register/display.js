@@ -351,7 +351,7 @@ function cardItemExtendedHTML(title, subtitle, period, description, place) {
   period = '<div class="label label-primary">' + period + "</div>";
   if (description)
     description =
-      '<div style="font-size:.8em;background-color: #757575;color:#fff;padding:.3em;border-radius:.3em;">' +
+      '<div style="font-size:.8em;border: .1em solid #e0e0e0;color:#757575;padding:.3em;border-radius:.3em;">' +
       description +
       "</div>";
   else

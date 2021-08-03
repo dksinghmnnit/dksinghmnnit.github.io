@@ -17,14 +17,14 @@ const talks = [
     type: "Expert Lecture",
     title: "Hardware Security",
     description: "Workshop SURAKSHA-2015",
-    location: "MNNIT Allahabad,",
+    location: "MNNIT Allahabad",
     date: "19-23 August 2015",
   },
   {
     type: "Expert Lecture",
     title: "Image Processing: An Introduction",
     description: "Workshop SIMDOC-2015 ",
-    location: "MNNIT Allahabad,",
+    location: "MNNIT Allahabad",
     date: "14-18 December 2015",
   },
   {
@@ -52,7 +52,7 @@ const talks = [
     title: "Computer Vision with MATLAB",
     description:
       "Workshop on MATLAB Applications in Science, Technology & Management",
-    location: "SMS, MNNIT Allahabad,",
+    location: "SMS, MNNIT Allahabad",
     date: " 1-7 December 2016",
   },
   {
@@ -99,7 +99,7 @@ const talks = [
   {
     type: "Expert Lecture and practical hands-on session",
     title: "‘Computer Vision’ & ‘Machine Learning’",
-    location: "Dept of CSE, MNNIT Allahabad,",
+    location: "Dept of CSE, MNNIT Allahabad",
     description: "Summer Training Program ETCS-2018",
     date: "June-July 2018",
   },
@@ -129,7 +129,7 @@ const talks = [
     title: "Computer and Machine Vision",
     description:
       "One week AICTE-QIP STC on Trends and Techniques in Image Processing, Multimedia and Security Issues",
-    location: "MITS Gwalior,",
+    location: "MITS Gwalior",
     date: " 15-19 March 2019",
   },
   {
@@ -149,7 +149,7 @@ const talks = [
     type: "Expert Lecture",
     title: "Machine Vision",
     description: "Workshop on Machine Learning and Internet of Things",
-    location: "RML Avadh University, Faizabad,",
+    location: "RML Avadh University, Faizabad",
     date: " 24-28 June 2019",
   },
   {
@@ -157,21 +157,21 @@ const talks = [
     title: "Object Detection Techniques",
     description:
       "Workshop on Applications of Machine Learning in Signal, Image & Computer Vision",
-    location: "BTKIT Dwarahat, Almora,",
+    location: "BTKIT Dwarahat, Almora",
     date: "07-11 July 2019",
   },
   {
     type: "Expert Lecture",
     title: "Algorithm Analysis",
     description: "STTP on Data Structures and Algorithms",
-    location: "REC Bijnor, Bijnor (UP),",
+    location: "REC Bijnor, Bijnor (UP)",
     date: " 30th Sept - 5th Oct 2019",
   },
   {
     type: "Expert Lecture",
     title: "IoT in Computer Vision",
     description: "STTP on Recent trends in IoT",
-    location: "REC Bijnor, Bijnor (UP),",
+    location: "REC Bijnor, Bijnor (UP)",
     date: " 30th Sept - 4th Oct 2019",
   },
   {
@@ -179,7 +179,7 @@ const talks = [
     title: "Deep Learning for Vision",
     description:
       "STTP on Deep Learning for Engineering and Science based Applications",
-    location: "LNCTS Bhopal, Bhopal (MP),",
+    location: "LNCTS Bhopal, Bhopal (MP)",
     date: " 14th - 16th Oct 2019",
   },
   {
@@ -195,7 +195,7 @@ const talks = [
     type: "Expert Lecture [Online Mode]",
     title: "Deep Learning",
     description: "FDP on Mathematical and Computational Modeling",
-    location: "LNCTS Bhopal, Bhopal (MP),",
+    location: "LNCTS Bhopal, Bhopal (MP)",
     date: "18 - 20 May 2020",
   },
   {
@@ -203,7 +203,7 @@ const talks = [
     title: "‘Machine Learning’ and ‘Deep Learning’",
     description:
       "STC on Machine Learning to Deep Learning: Trends and Challenges",
-    location: "SRIT Jabalpur (MP),",
+    location: "SRIT Jabalpur (MP)",
     date: " 29 - 30 May 2020",
   },
   {
@@ -232,14 +232,14 @@ const talks = [
     type: "Expert Lectures and Hands-on-session",
     description: "7 Days Training Program",
     title: "Python for Machine Learning and Applications",
-    location: "IPS College of Technology and Management, Gwalior (MP),",
+    location: "IPS College of Technology and Management, Gwalior (MP)",
     date: " 24th Aug to 30th Aug 2020 [Online Mode]",
   },
   {
     type: "Technical session",
     title: "Computer Vision",
     description:
-      "“Congress on Intelligent Systems (CIS-2020)” held in virtual mode under Soft Computing Research Society,",
+      "“Congress on Intelligent Systems (CIS-2020)” held in virtual mode under Soft Computing Research Society",
     date: " 05-06 September, 2020",
   },
   {
@@ -261,7 +261,7 @@ const talks = [
     title: "Intelligent Systems",
     description:
       "3rd International Conference on VLSI, Communication and Signal Processing, held in virtual mode",
-    location: "MNNIT Allahabad,",
+    location: "MNNIT Allahabad",
     date: "09-11 October, 2020",
   },
   {
@@ -275,7 +275,7 @@ const talks = [
     type: "Expert Lecture",
     title: "Towards Machine Learning",
     description: "Workshop on Machine Learning and Internet of Things",
-    location: "RML Avadh University, Faizabad,",
+    location: "RML Avadh University, Faizabad",
     date: "19-23 February 2021",
   },
   {
@@ -290,8 +290,8 @@ const talks = [
     title:
       "‘Machine Vision for Robotic Applications’ and ‘Programming Aspects’",
     description:
-      "1 week FDP on Recent Advances & Applications of Machines Learning & IoT in Mechanical Engineering,",
-    location: "SISTec Bhopal (MP),",
+      "1 week FDP on Recent Advances & Applications of Machines Learning & IoT in Mechanical Engineering",
+    location: "SISTec Bhopal (MP)",
     date: " 22-27 Feb 2021 [25th Aug 2020, Online Mode]",
   },
   {
@@ -305,7 +305,7 @@ const talks = [
     type: "Expert Lectures and Hands-on-session [Online Mode]",
     description: "5 Days Training Program",
     title: "A Practical Approach to IoT",
-    location: "IPS College of Technology and Management, Gwalior (MP),",
+    location: "IPS College of Technology and Management, Gwalior (MP)",
     date: " 15th March to 19th March 2021",
   },
   {
