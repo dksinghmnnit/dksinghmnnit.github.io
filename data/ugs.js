@@ -1,6 +1,6 @@
 const ugs = [
   {
-    title: "To be decided",
+    title: "Computer Vision based Sports Activity Recognition",
     date: "2021",
     author:
       "Shefali Rai (20174051)"+
@@ -8,7 +8,7 @@ const ugs = [
       "<br />Saptarick Mishra (20174089)",
   },
   {
-    title: "To be decided",
+    title: "Exercise Posture Correction using Pose Estimation and Geometrical Approach",
     date: "2021",
     author:
       "Harsh Chaturvedi (20174088)"+
@@ -16,7 +16,7 @@ const ugs = [
       "<br />Kumari Simran (20174105)",
   },
   {
-    title: "To be decided",
+    title: "Eye Gaze Tracking for Virtual Keyboard Controls",
     date: "2021",
     author:
       "Shruti Barnawal (20178063)"+
