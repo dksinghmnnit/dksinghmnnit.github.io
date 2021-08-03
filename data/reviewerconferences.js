@@ -1,4 +1,4 @@
-const reviews = [
+const reviewerconferences = [
   "TPC member for CVIP-2020 IIITA &amp; UPCON-2020 MNNITA",
   "TPC member and reviewer for SRAIC-2019 &amp; CICT-2019",
   "TPC member and reviewer for ICETIT-2019 &amp; ICAICR-2019",
@@ -26,4 +26,4 @@ const reviews = [
   "TPC &amp; Reviewer for SIN 2012, SIN 2013"
 ];
 
-export default reviews;
+export default reviewerconferences;

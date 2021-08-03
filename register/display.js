@@ -123,12 +123,19 @@ workshops.forEach((workshop) => {
 });
 // console.log(workshops.reverse());
 
-//reviews
-import reviews from "../data/reviews.js";
-reviews.forEach((review) => {
-  $("#reviews").append(timelineItemHTML(review));
+//reviewerjournals
+import reviewerjournals from "../data/reviewerjournals.js";
+reviewerjournals.forEach((reviewerjournal) => {
+  $("#reviewerjournals").append(timelineItemHTML(reviewerjournal));
 });
-// console.log(reviews.reverse());
+console.log(reviewerjournals.reverse());
+
+//reviewerconferences
+import reviewerconferences from "../data/reviewerconferences.js";
+reviewerconferences.forEach((reviewerconference) => {
+  $("#reviewerconferences").append(timelineItemHTML(reviewerconference));
+});
+// console.log(reviewerconferences.reverse());
 
 //fundings
 import fundings from "../data/fundings.js";
