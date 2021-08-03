@@ -349,17 +349,14 @@ function cardItemExtendedHTML(title, subtitle, period, description, place) {
   title = "<h3>" + title + "</h3>";
   subtitle = "<small>" + subtitle + "</small>";
   period = '<div class="label label-primary">' + period + "</div>";
-  if (description)
-    description =
-      '<div style="font-size:.8em;border: .1em solid #e0e0e0;color:#757575;padding:.3em;border-radius:.3em;">' +
-      description +
-      "</div>";
-  else
-    description = "";
+  if (description) description = "<div>" + description + "</div>";
+  else description = "";
   if (place)
-    place = "<div>" + place + "</div>";
-  else
-    place = "";
+    place =
+      '<div style="font-size:.8em;border: .1em solid #e0e0e0;color:#757575;padding:.3em;border-radius:.3em;">' +
+      place +
+      "</div>";
+  else place = "";
   return (
     '<div class="card-item">' +
     title +
