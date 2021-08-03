@@ -97,7 +97,7 @@ talks.forEach((talk) => {
       talk.type,
       talk.date,
       talk.description,
-      talk.place
+      talk.location
     )
   );
 });
@@ -346,21 +346,27 @@ function timelineItemExtendedHTML(title, subtitle, period, description) {
 
 //prepare timelineitemextended object's HTML
 function cardItemExtendedHTML(title, subtitle, period, description, place) {
+  title = "<h3>" + title + "</h3>";
+  subtitle = "<small>" + subtitle + "</small>";
+  period = '<div class="label label-primary">' + period + "</div>";
+  if (description)
+    description =
+      '<div style="font-size:.8em;background-color: #757575;color:#fff;padding:.3em;border-radius:.3em;">' +
+      description +
+      "</div>";
+  else
+    description = "";
+  if (place)
+    place = "<div>" + place + "</div>";
+  else
+    place = "";
   return (
     '<div class="card-item">' +
-    "<h3>" +
     title +
-    "</h3>" +
-    "<small>" +
     subtitle +
-    "</small>" +
-    '<div class="label label-primary">' +
     period +
-    "</div>" +
-    (description
-      ? '<div class="lm-default-row">' + description + "</div>"
-      : "") +
-    (place ? '<div class="lm-default-row">' + place + "</div>" : "") +
+    description +
+    place +
     "</div>"
   );
 }
