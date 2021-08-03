@@ -1,5 +1,29 @@
 const ugs = [
   {
+    title: "To be decided",
+    date: "2021",
+    author:
+      "Shefali Rai (20174051)"+
+      "<br />Sanjana Bharti (20174039)"+
+      "<br />Saptarick Mishra (20174089)",
+  },
+  {
+    title: "To be decided",
+    date: "2021",
+    author:
+      "Harsh Chaturvedi (20174088)"+
+      "<br />Ankush Malik (20174160)"+
+      "<br />Kumari Simran (20174105)",
+  },
+  {
+    title: "To be decided",
+    date: "2021",
+    author:
+      "Shruti Barnawal (20178063)"+
+      "<br />Shivam Srivastava (20178025)"+
+      "<br />Swetha Nagarajan (20178064)",
+  },
+  {
     title: "Smart Emeotion Detector and Typing Assistant",
     date: "2020",
     author:
