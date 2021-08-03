@@ -129,6 +129,12 @@ reviews.forEach((review) => {
 });
 // console.log(reviews.reverse());
 
+//patents
+import patents from "../data/patents.js";
+patents.forEach((patent) => {
+  $("#patents").append(timelineItemHTML(patent));
+});
+// console.log(patents.reverse());
 
 $(window).on("load", function () {
   //initialize the firebase app
