@@ -354,7 +354,10 @@ function timelineItemExtendedHTML(title, subtitle, period, description) {
 function cardItemExtendedHTML(title, subtitle, period, description, place) {
   title = "<h3>" + title + "</h3>";
   subtitle = "<small>" + subtitle + "</small>";
-  period = '<div class="label label-primary">' + period + "</div>";
+  period =
+    '<strong style="font-size:.8em;line-height:1em;color:#29b6f6;border:1px solid #29b6f6;padding:.3em;border-radius:.3em;">' +
+    period +
+    "</strong>";
   if (description) description = "<div>" + description + "</div>";
   else description = "";
   if (place)
