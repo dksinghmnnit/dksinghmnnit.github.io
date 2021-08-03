@@ -114,6 +114,7 @@ import duties from "../data/duties.js";
 duties.forEach((duty) => {
   $("#duties").append(timelineItemHTML(duty));
 });
+// console.log(duties.reverse());
 
 //workshops
 import workshops from "../data/workshops.js";
