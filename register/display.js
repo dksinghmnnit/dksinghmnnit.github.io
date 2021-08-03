@@ -101,7 +101,7 @@ talks.forEach((talk) => {
     )
   );
 });
-// console.log(talks);
+// console.log(talks.reverse());
 
 //technical sessions
 import sessions from "../data/sessions.js";
