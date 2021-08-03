@@ -130,6 +130,13 @@ reviews.forEach((review) => {
 });
 // console.log(reviews.reverse());
 
+//fundings
+import fundings from "../data/fundings.js";
+fundings.forEach((funding) => {
+  $("#fundings").append(timelineItemHTML(funding));
+});
+// console.log(fundings.reverse());
+
 //patents
 import patents from "../data/patents.js";
 patents.forEach((patent) => {
