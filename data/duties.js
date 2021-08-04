@@ -1,5 +1,6 @@
 const duties = [
   "Excom. Member of IEEE UP Section, UP East Sub-section",
+  "Chairman, CSI Allahabad Chapter from April 2021 – till date.",
   "Convener, Departmental Under Graduate Committee (DUGC-CSE), CSED from July 2020 &ndash; till date",
   "Vice Chairman (Chairman Elect), CSI Allahabad Chapter from April 2020 &ndash; March 2021.",
   "Warden, C V Raman Hostel, MNNIT Allahabad, from Feb 2020 &ndash; till date.",
