@@ -41,7 +41,47 @@
       </div>
     </div>
     <!-- /Loading animation -->
+    <div class="site-logo mobile-menu-hide">
+      <img src="images/mnnit.png" />
+    </div>
+    <style>
+      .site-logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        margin-left: 4em;
+        border-radius: 0.5em;
+        z-index: 999;
+      }
+      .site-logo > img {
+        width: 7em;
+        transition: all 0.2s ease-in-out;
+      }
+      .site-logo.sticked > img {
+        width: 1.8em;
+        margin-left: 5em;
+      }
 
+      @media screen and (max-width: 1440px) {
+        .site-logo {
+          margin-left: 1em;
+        }
+        .site-logo > img {
+          width: 4em;
+        }
+        .site-logo.sticked > img {
+          margin-left: 1em;
+        }
+      }
+    </style>
+    <script>
+      $(window).scroll(() => {
+        if ($(document).scrollTop() > 15) $(".site-logo").addClass("sticked");
+        else $(".site-logo").removeClass("sticked");
+        // console.log($(document).scrollTop());
+      });
+    </script>
     <div id="page" class="page">
       <!-- Header -->
       <header id="site_header" class="header mobile-menu-hide">
@@ -51,63 +91,17 @@
             <!-- Main menu -->
             <ul id="nav" class="site-main-menu">
               <li>
-                <img src="images/mnnit.png" style="max-width: 46px" />
-              </li>
-              <li>
-                <a class="pt-trigger" href="#"> </a>
-              </li>
-              <li>
                 <a class="pt-trigger" href="#home">Home</a
                 ><!-- href value = data-id without # of .pt-page. -->
               </li>
               <li>
-                <a class="pt-trigger" href="#info">Information</a>
+                <a class="pt-trigger" href="#info">Basic Information</a>
               </li>
               <li>
                 <a class="pt-trigger" href="#publications">Publications</a>
               </li>
-              <li class="dropdown">
-                <a
-                  class="dropdown-toggle pt-trigger"
-                  data-toggle="dropdown"
-                  href="#thesis"
-                  >Thesis Supervised <span class="caret"></span
-                ></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <div class="scroll-trigger" data-id="phds">PhD Thesis</div>
-                  </li>
-                  <li>
-                    <div class="scroll-trigger" data-id="mtechs">
-                      M.Tech Thesis
-                    </div>
-                  </li>
-                  <li>
-                    <div class="scroll-trigger" data-id="ugs">
-                      UG Dissertation
-                    </div>
-                  </li>
-                </ul>
-                <style>
-                  .dropdown.open .dropdown-menu {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: stretch;
-                  }
-                  .scroll-trigger:hover {
-                    cursor: pointer;
-                  }
-                </style>
-                <script>
-                  $(".scroll-trigger").on("click", function () {
-                    const id = $(this).data("id");
-                    var offset = $("#" + id).offset();
-                    offset.top -= 150;
-                    $("html, body").animate({
-                      scrollTop: offset.top,
-                    });
-                  });
-                </script>
+              <li>
+                <a class="pt-trigger" href="#thesis">Thesis Supervised</a>
               </li>
               <!-- <li>
                 <a class="pt-trigger" href="#thesis">Thesis Supervised</a>
@@ -118,7 +112,9 @@
                 >
               </li>
               <li>
-                <a class="pt-trigger" href="#roles">Roles</a>
+                <a class="pt-trigger" href="#roles"
+                  >Roles and Responsibilities</a
+                >
               </li>
               <li>
                 <a class="pt-trigger" href="#projects">Projects Undertaken</a>
@@ -127,6 +123,11 @@
                 <a class="pt-trigger" href="#blog">Blog</a>
               </li> -->
             </ul>
+            <style>
+              .site-main-menu li a {
+                font-size: 0.94em;
+              }
+            </style>
             <!-- /Main menu -->
           </div>
           <!-- Navigation -->
@@ -251,7 +252,9 @@
                         <li>
                           <span class="title">Scopus Id</span>
                           <span class="value">
-                            &nbsp;&nbsp;<a href="http://www.scopus.com/authid/detail.url?authorId=57209912231" >
+                            &nbsp;&nbsp;<a
+                              href="http://www.scopus.com/authid/detail.url?authorId=57209912231"
+                            >
                               57209912231
                             </a>
                           </span>
@@ -259,7 +262,9 @@
                         <li>
                           <span class="title">Orcid Id</span>
                           <span class="value">
-                            &nbsp;&nbsp;<a href="http://www.orcid.org/0000-0002-1897-1660" >
+                            &nbsp;&nbsp;<a
+                              href="http://www.orcid.org/0000-0002-1897-1660"
+                            >
                               0000-0002-1897-1660
                             </a>
                           </span>
