@@ -17,6 +17,12 @@ const ongoingphds =[
         status:"Comprehensive done",
         title:"To be decided",
     },
+    {
+        author:"Ms. Shruti Pallawi (2021RCS28)",
+        date:"August 2021",
+        status:"Registered",
+        title:"To be decided",
+    },
 ];
 
 export default ongoingphds;
