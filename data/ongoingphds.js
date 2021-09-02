@@ -1,10 +1,4 @@
-const phds =[
-    {
-        author:"Neelam Dwivedi [2015RCS02]",
-        date:"30 June 2021",
-        status:"Thesis Submitted",
-        title:"Novel Techniques for Suspicious Activity Detection through Video Surveillance at Public Places",
-    },
+const ongoingphds =[
     {
         author:"Mohd. Aquib Ansari [2018RCS07]",
         date:"01 Oct 2019",
@@ -25,4 +19,4 @@ const phds =[
     },
 ];
 
-export default phds;
+export default ongoingphds;

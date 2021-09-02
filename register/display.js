@@ -19,37 +19,74 @@ bookchapters.forEach((bookchapter) => {
 });
 // console.log(bookchapters.reverse());
 
-//PhD
-import phds from "../data/phds.js";
-phds.forEach((phd, key) => {
-  $("#phds").append(phdHTML(phd, key));
+//Completed PhD
+import completedphds from "../data/completedphds.js";
+completedphds.forEach((completedphd, key) => {
+  $("#completedphds").append(completedphdHTML(completedphd, key));
 });
-function phdHTML(phd, key) {
+function completedphdHTML(completedphd, key) {
   return (
     '<div class="timeline-item" style=" display: flex; flex-direction: row; gap: 30px; align-items: center;">' +
     "<div>" +
     '<img class="img-thumbnail img-circle"' +
-    'src="images/phd/img_' +
+    'src="images/phd/completed_' +
     (key + 1) +
     '.jpg"' +
     'alt="' +
-    phd.author +
+    completedphd.author +
     '"' +
     'style="min-width: 5em; max-width: 8em"' +
     "/>" +
     "</div>" +
     "<div>" +
     '<h4 class="item-title">' +
-    phd.title +
+    completedphd.title +
     "</h4>" +
     '<span class="item-period">' +
-    phd.date +
+    completedphd.date +
     "</span>" +
     '<span class="item-small">' +
-    phd.status +
+    completedphd.status +
     "</span>" +
     '<p class="item-description">' +
-    phd.author +
+    completedphd.author +
+    "</p>" +
+    "</div>" +
+    "</div>"
+  );
+}
+
+//Ongoing PhD
+import ongoingphds from "../data/ongoingphds.js";
+ongoingphds.forEach((ongoingphd, key) => {
+  $("#ongoingphds").append(ongoingphdHTML(ongoingphd, key));
+});
+function ongoingphdHTML(ongoingphd, key) {
+  return (
+    '<div class="timeline-item" style=" display: flex; flex-direction: row; gap: 30px; align-items: center;">' +
+    "<div>" +
+    '<img class="img-thumbnail img-circle"' +
+    'src="images/phd/ongoing_' +
+    (key + 1) +
+    '.jpg"' +
+    'alt="' +
+    ongoingphd.author +
+    '"' +
+    'style="min-width: 5em; max-width: 8em"' +
+    "/>" +
+    "</div>" +
+    "<div>" +
+    '<h4 class="item-title">' +
+    ongoingphd.title +
+    "</h4>" +
+    '<span class="item-period">' +
+    ongoingphd.date +
+    "</span>" +
+    '<span class="item-small">' +
+    ongoingphd.status +
+    "</span>" +
+    '<p class="item-description">' +
+    ongoingphd.author +
     "</p>" +
     "</div>" +
     "</div>"
@@ -128,7 +165,7 @@ import reviewerjournals from "../data/reviewerjournals.js";
 reviewerjournals.forEach((reviewerjournal) => {
   $("#reviewerjournals").append(timelineItemHTML(reviewerjournal));
 });
-console.log(reviewerjournals.reverse());
+// console.log(reviewerjournals.reverse());
 
 //reviewerconferences
 import reviewerconferences from "../data/reviewerconferences.js";
