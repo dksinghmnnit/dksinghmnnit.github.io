@@ -1,6 +1,6 @@
 const journals =
 [
-    "Neelam Dwivedi, D. K. Singh, D. S. Kushwaha, &ldquo;Employing Data Generation for Visual Weapon Identification using Convolutional Neural Networks&rdquo;, Springer Multimedia Systems, Vol&nbsp; pp.&nbsp; (Accepted, September 2021) [SCI Indexed, IF = 1.935]",
+    "Neelam Dwivedi, <strong>D. K. Singh</strong>, D. S. Kushwaha, &ldquo;Employing Data Generation for Visual Weapon Identification using Convolutional Neural Networks&rdquo;, Springer Multimedia Systems, Vol &nbsp;pp. &nbsp;(Accepted, September 2021) [<strong>SCI Indexed, IF = 1.935</strong>]",
     "Mayank Kumar Rusia, <strong>D. K. Singh</strong>, &ldquo;An Efficient CNN Approach for Facial Expression Recognition with Some Measures of Overfitting&rdquo;, Springer International Journal of Information Technology, Vol &nbsp;&nbsp;&nbsp;pp. &nbsp;(<strong>Accepted</strong>, September 2021). [<strong>Scopus Indexed</strong>]",
     "Aquib Ansari, <strong>D. K. Singh</strong>, &ldquo;An expert video surveillance system to identify and mitigate shoplifting in megastores&rdquo;, Springer Multimedia Tools and Applications, Vol &nbsp;pp. &nbsp;(<strong>Accepted</strong>, Aug 2021). [<strong>SCI Indexed, IF=2.757</strong>]",
     "<strong>D. K. Singh,</strong> &ldquo;3D-CNN based Dynamic Gesture Recognition for Indian Sign Language Modeling&rdquo;, Elsevier Procedia Computer Science, Vol 189 pp. 76-83 (July 2021) [<strong>Scopus Indexed</strong>]",
